@@ -1,9 +1,12 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const util = require('util');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+const writeFileAsync = util.promisify(fs.writeFile);
 // TODO: Create an array of questions for user input
-const questions = ([
+function promptUser() {
+ return inquirer.prompt([
     {
         type: 'input',
         message: 'Enter your repository name:',
@@ -57,17 +60,17 @@ const questions = ([
         message: 'Enter contact information email/discord/slack/social media.',
         name: 'Contact Info',
     }
-])
+]);
+}
 
 // TODO: Create a function to write README file
-.then((data)=>{
-    const createFile = data.title.replace(' ',"").toLowerCase()
-    fs.writeFile(`${createFile},md`, generateMarkdown(data), (err)=>
-    err? console.error(err): console.log('Thanks for using Generate-a-Readme. The information you have entered is being generated into a README.md file for you.'))
-})
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+async function init(){
+    try {
+        const answers = await promptUser();
+        const generateFile = generateMarkdown(answers);
+        await writeFileAsync('./Results/README.md');
+    } catch (err){
+        console.log(err)
+    }
+}
 init();
