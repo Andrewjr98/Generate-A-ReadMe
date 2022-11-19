@@ -1,9 +1,9 @@
 
-  # a
-  ![Badge](https://img.shields.io/badge/license-$(license)-blue.svg)
+  # Generate-a-readme
+  
   ## Description
 
-  s
+  A repository that adds to the inquirer functionality and generates a readme efficiently and effectivly
 
   ## Table of Contents
   *[Installation](#installation)
@@ -11,39 +11,39 @@
   *[Contribution](#constibution)
   *[Test](#test)
   *[Questions](#questions)
-  -[License](#license)
+  
 
   ## Installation
   _Here is a guide to Installing this application_
 
-  d
+  download from github and install the inquirer version ncessary
 
   ## Usage
 
   _Use cases and How to use this application_
 
-  f
+  as a readme generator
 
   ## Contribution 
   _If you would like to contribute, please follow these rules, and here is how you can contribute_
   
-  h
+  add functionality to generate other files such as db's
 
   ## Test
   _How to test this application_
 
-  j
+  test if the functionality works through different phrases and such
 
   ## Questions
   _If you have any questions please submit them here:_
 
-  k
+  andrewrandolph98@gmail.com
 
   _Contact Info_
 
--Email: l
+-Email: Andrewjr98
 
-Github: [a](https://github.com/a)
+Github: [andrewrandolph98@gmail.com](https://github.com/andrewrandolph98@gmail.com)
 
 ---
 
