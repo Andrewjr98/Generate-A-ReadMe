@@ -10,7 +10,7 @@ function promptUser() {
     {
         type: 'input',
         message: 'Enter your repository name:',
-        naem: 'Title',
+        name: 'Title',
     },
     {
         type: 'input',
@@ -52,13 +52,18 @@ function promptUser() {
     },
     {
         type: 'input',
+        message:'If you have any questions please submit them here',
+        name: 'Questions'
+    },
+    {
+        type: 'input',
         message: 'Enter your Github Username',
-        name: 'email',
+        name: 'github',
     },
     {
         type: 'input',
         message: 'Enter contact information email/discord/slack/social media.',
-        name: 'Contact Info',
+        name: 'Contact',
     }
 ]);
 }
@@ -67,8 +72,9 @@ function promptUser() {
 async function init(){
     try {
         const answers = await promptUser();
+        console.log(answers);
         const generateFile = generateMarkdown(answers);
-        await writeFileAsync('./Results/README.md');
+        await writeFileAsync('./Results/README.md', generateFile);
     } catch (err){
         console.log(err)
     }
