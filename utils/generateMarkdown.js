@@ -37,7 +37,7 @@ function generateMarkdown(data) {
   ## Table of Contents
   *[Installation](#installation)
   *[Usage](#usage)
-  *[Contribution](#constibution)
+  *[Contribution](#contribution)
   *[Test](#test)
   *[Questions](#questions)
   ${renderLicenseLink(data.License)}
@@ -52,6 +52,9 @@ function generateMarkdown(data) {
   _Use cases and How to use this application_
 
   ${data.Usage}
+
+  ### License
+  ${data.License}
 
   ## Contribution 
   _If you would like to contribute, please follow these rules, and here is how you can contribute_
